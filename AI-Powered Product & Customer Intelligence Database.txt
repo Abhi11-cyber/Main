@@ -1,0 +1,965 @@
+================================================================================
+                 DP-800 PROJECT MASTER DOCUMENT
+================================================================================
+
+PROJECT TITLE:
+AI-Powered Product & Customer Intelligence Database
+
+TECHNICAL DATABASE NAME:
+DP800_AI_ProductCustomerDB
+
+PRIMARY TECHNOLOGY:
+Microsoft SQL Server 2025 Developer Edition
+
+PRIMARY DEVELOPMENT TOOLS:
+- SQL Server 2025 Developer Edition
+- SQL Server Management Studio (SSMS)
+- Visual Studio Code
+- Git
+- GitHub
+- SQL Database Projects
+- sqlcmd
+- Data API Builder
+- Azure services where required
+- AI / embedding model services during the AI phase
+
+CERTIFICATION TARGET:
+Microsoft DP-800 — Administering Microsoft SQL Server and Azure SQL
+(Database/project is designed as a hands-on learning project aligned with
+DP-800 concepts and objectives.)
+
+================================================================================
+1. PROJECT OVERVIEW
+================================================================================
+
+The project is an AI-powered product and customer intelligence database.
+
+Instead of creating a small "student database" or a simple CRUD database,
+we are building a realistic e-commerce/product-intelligence system that
+gradually introduces:
+
+- Relational database design
+- T-SQL
+- Database constraints
+- Relationships
+- Advanced queries
+- Stored procedures
+- Functions
+- Views
+- Triggers
+- Indexes
+- Query optimization
+- Transactions
+- Concurrency
+- Security
+- Encryption
+- Row-Level Security
+- Dynamic Data Masking
+- JSON
+- Advanced SQL Server features
+- SQL Database Projects
+- Git/GitHub
+- CI/CD
+- REST APIs
+- GraphQL
+- Data API Builder
+- Azure database concepts
+- AI models
+- Embeddings
+- Vector data
+- Vector search
+- Semantic search
+- Hybrid search
+- RAG (Retrieval-Augmented Generation)
+
+The project is intentionally designed so that one realistic system teaches
+multiple DP-800 concepts instead of learning every concept in isolation.
+
+
+================================================================================
+2. WHY ARE WE BUILDING THIS PROJECT?
+================================================================================
+
+The purpose is NOT simply to create an application.
+
+The primary purpose is to use a realistic project as a learning environment
+for DP-800.
+
+A traditional database can answer questions such as:
+
+"Show all laptops."
+
+"Show all customers from Maharashtra."
+
+"Show products costing less than 80000."
+
+"Show customers who placed more than 5 orders."
+
+An AI-enabled database can eventually handle more meaningful queries such as:
+
+"Find a lightweight laptop suitable for programming with long battery life."
+
+"Find products similar to this customer's interests."
+
+"Find products whose descriptions and reviews semantically match this request."
+
+This introduces AI concepts such as:
+
+- Embeddings
+- Vector representations
+- Semantic search
+- Hybrid search
+- Retrieval
+- RAG
+- AI-generated responses
+
+Therefore, the project combines:
+
+DATABASE ENGINEERING
++
+AI DATABASE CAPABILITIES
++
+DEVELOPMENT
++
+SECURITY
++
+PERFORMANCE
++
+SOURCE CONTROL
++
+API DEVELOPMENT
+
+
+================================================================================
+3. REAL-WORLD SCENARIO
+================================================================================
+
+Imagine that we are developing a database for an e-commerce company.
+
+The company sells products online.
+
+The company needs to store:
+
+- Customers
+- Customer preferences
+- Products
+- Product categories
+- Product descriptions
+- Inventory
+- Orders
+- Order items
+- Product reviews
+- Customer interactions
+- AI-related product representations
+
+The database must support:
+
+1. Normal relational operations.
+2. Secure customer information.
+3. Fast product searches.
+4. Efficient reporting.
+5. Advanced SQL queries.
+6. API access.
+7. AI-powered semantic product discovery.
+8. Vector search.
+9. Hybrid search.
+10. RAG-based responses.
+
+
+================================================================================
+4. HIGH-LEVEL PROJECT ARCHITECTURE
+================================================================================
+
+The conceptual architecture is:
+
+Customers
+    |
+    +---- Preferences
+    |
+    +---- Orders
+    |
+    +---- Reviews
+    |
+    +---- Interactions
+              |
+              v
+Products ---- Categories ---- Inventory
+    |
+    +---- Product descriptions
+    |
+    +---- Reviews
+    |
+    +---- AI-generated representations
+              |
+              v
+        Embeddings / Vectors
+              |
+              v
+      Semantic / Hybrid Search
+              |
+              v
+             RAG
+              |
+              v
+        AI-generated answers
+
+
+More complete architecture:
+
+                         GITHUB
+                           |
+                     Git / CI-CD
+                           |
+                           v
+                    VISUAL STUDIO CODE
+                           |
+              SQL / Database Project / Git
+                           |
+                           v
+                SQL SERVER 2025 DEVELOPER
+                           |
+                           v
+             DP800_AI_ProductCustomerDB
+                           |
+          +----------------+----------------+
+          |                |                |
+          v                v                v
+      Customers        Products          Orders
+          |                |                |
+          |                v                |
+          |            Categories          |
+          |                |                |
+          |            Inventory            |
+          |                |                |
+          +----------------+----------------+
+                           |
+                           v
+                       Reviews
+                           |
+                           v
+                    Product Data
+                           |
+                           v
+                     Embeddings
+                           |
+                           v
+                    Vector Search
+                           |
+                           v
+                    Hybrid Search
+                           |
+                           v
+                          RAG
+                           |
+             +-------------+-------------+
+             |                           |
+             v                           v
+       Data API Builder              AI Model
+       REST / GraphQL                   |
+             |                           |
+             +-------------+-------------+
+                           |
+                           v
+                     AI Application
+
+
+================================================================================
+5. CURRENT DATABASE
+================================================================================
+
+DATABASE NAME:
+
+DP800_AI_ProductCustomerDB
+
+SQL SERVER INSTANCE:
+
+MSSQLSERVER
+
+SQL SERVER VERSION:
+
+Microsoft SQL Server 2025
+
+EDITION:
+
+Enterprise Developer Edition (64-bit)
+
+DATABASE ENGINE:
+
+SQL Server 2025 Developer
+
+
+================================================================================
+6. CURRENT DATABASE TABLE
+================================================================================
+
+The first table already created is:
+
+dbo.Customers
+
+The Customers table is used to practice:
+
+- Table creation
+- Data types
+- Identity column
+- Primary key
+- Unique constraint
+- Default constraint
+- INSERT
+- SELECT
+- Database context
+- Basic relational design
+
+A test record has already been inserted and successfully queried.
+
+Therefore the initial database setup has been verified successfully.
+
+
+================================================================================
+7. CURRENT DEVELOPMENT ENVIRONMENT
+================================================================================
+
+OPERATING SYSTEM:
+Windows 11
+
+VISUAL STUDIO CODE:
+Version 1.136.0
+
+GIT:
+Installed successfully.
+
+SQL SERVER:
+SQL Server 2025 Developer Edition
+
+SQL SERVER INSTANCE:
+MSSQLSERVER
+
+SQL SERVER MANAGEMENT STUDIO:
+Installed and successfully connected.
+
+DATABASE:
+DP800_AI_ProductCustomerDB
+
+TABLE:
+dbo.Customers
+
+CURRENT STATUS:
+Database query execution has been successfully verified.
+
+
+================================================================================
+8. TOOLS ALREADY INSTALLED
+================================================================================
+
+1. Windows 11
+   Purpose:
+   Main development operating system.
+
+2. Visual Studio Code
+   Version:
+   1.136.0
+
+   Purpose:
+   - SQL development
+   - SQL Database Projects
+   - Git
+   - Database source control
+   - Project files
+   - CI/CD work
+   - AI-assisted development
+
+3. Git
+
+   Purpose:
+   - Version control
+   - Commits
+   - Branches
+   - GitHub integration
+   - Source-controlled database development
+
+4. SQL Server 2025 Developer Edition
+
+   Purpose:
+   Main local database engine.
+
+5. SQL Server Management Studio (SSMS)
+
+   Purpose:
+   - Database administration
+   - Query execution
+   - Database development
+   - Security
+   - Performance analysis
+   - Execution plans
+   - Troubleshooting
+
+
+================================================================================
+9. TOOLS / COMPONENTS TO ADD LATER
+================================================================================
+
+We should NOT install everything at once.
+
+Each tool should be introduced when its learning phase arrives.
+
+Tools/components that will be needed:
+
+1. VS Code MSSQL extension
+
+2. SQL Database Projects extension
+
+3. sqlcmd
+
+4. GitHub repository
+
+5. GitHub Copilot / AI-assisted development tools where useful
+
+6. Data API Builder
+
+7. Azure resources when cloud implementation is required
+
+8. AI / embedding model access
+
+The purpose is to avoid unnecessary installations and understand why every
+tool is being used.
+
+
+================================================================================
+10. DP-800 MAJOR SKILL AREAS
+================================================================================
+
+The project is organized around the three major DP-800 areas:
+
+AREA 1:
+Design and develop database solutions
+Official weighting:
+35–40%
+
+AREA 2:
+Secure, optimize and deploy database solutions
+Official weighting:
+35–40%
+
+AREA 3:
+Implement AI capabilities in database solutions
+Official weighting:
+25–30%
+
+
+IMPORTANT:
+
+These percentages are the exam skill-area weightings.
+
+They are NOT marks that the project itself will receive.
+
+Our project-learning coverage percentages are separate estimates.
+
+
+================================================================================
+11. AREA 1 — DESIGN & DEVELOP DATABASE SOLUTIONS
+================================================================================
+
+TARGET:
+35–40% of the DP-800 exam skill weighting.
+
+The project will teach the following.
+
+--------------------------------------------------------------------------------
+11.1 DATABASE FUNDAMENTALS
+--------------------------------------------------------------------------------
+
+Learn:
+
+- Relational databases
+- Database schemas
+- Tables
+- Columns
+- Rows
+- Data types
+- NULL
+- NOT NULL
+- Identity columns
+- Primary keys
+- Foreign keys
+- Unique constraints
+- Check constraints
+- Default constraints
+
+These concepts are already beginning with the Customers table.
+
+
+--------------------------------------------------------------------------------
+11.2 RELATIONSHIPS
+--------------------------------------------------------------------------------
+
+Learn:
+
+- One-to-one relationships
+- One-to-many relationships
+- Many-to-many relationships
+- Foreign keys
+- Referential integrity
+- Relationship design
+- Normalization
+
+Planned relationship:
+
+Customer
+    |
+    +----< Order
+              |
+              +----< OrderItem >---- Product
+                                      |
+                                      +---- Category
+
+Customer
+    |
+    +----< Review >---- Product
+
+
+--------------------------------------------------------------------------------
+11.3 T-SQL FUNDAMENTALS
+--------------------------------------------------------------------------------
+
+Learn:
+
+SELECT
+FROM
+WHERE
+ORDER BY
+GROUP BY
+HAVING
+JOIN
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+INSERT
+UPDATE
+DELETE
+
+
+--------------------------------------------------------------------------------
+11.4 ADVANCED T-SQL
+--------------------------------------------------------------------------------
+
+Learn:
+
+- Subqueries
+- Correlated subqueries
+- CTEs
+- Recursive CTEs
+- Window functions
+- Ranking functions
+- Aggregation
+- Error handling
+- Transactions
+
+Examples of window functions:
+
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+LEAD()
+LAG()
+SUM() OVER()
+AVG() OVER()
+
+
+--------------------------------------------------------------------------------
+11.5 DATABASE OBJECTS
+--------------------------------------------------------------------------------
+
+Learn:
+
+- Views
+- Stored procedures
+- Scalar functions
+- Table-valued functions
+- Triggers
+- Sequences
+
+
+================================================================================
+12. INDEXING AND PERFORMANCE
+================================================================================
+
+Learn:
+
+- Clustered indexes
+- Nonclustered indexes
+- Composite indexes
+- Included columns
+- Unique indexes
+- Columnstore indexes
+- Index selection
+- Index maintenance concepts
+- When indexes improve performance
+- When indexes can hurt performance
+- Execution plans
+
+
+================================================================================
+13. JSON AND SEMI-STRUCTURED DATA
+================================================================================
+
+The database will not only contain traditional relational data.
+
+Example:
+
+{
+    "brand": "Example",
+    "features": [
+        "16GB RAM",
+        "512GB SSD",
+        "AI processor"
+    ],
+    "colors": [
+        "Silver",
+        "Black"
+    ]
+}
+
+Learn:
+
+- JSON storage
+- JSON_VALUE
+- OPENJSON
+- JSON_OBJECT
+- JSON_ARRAY
+- JSON aggregation
+- JSON indexing/design
+
+
+================================================================================
+14. SPECIALIZED SQL SERVER FEATURES
+================================================================================
+
+We will learn practical examples of:
+
+- Temporal tables
+- Graph concepts / graph tables
+- Ledger
+- In-memory tables
+- External tables
+- Partitioning
+- Sequences
+
+The objective is not necessarily to make every specialized feature a major
+part of the application.
+
+The objective is:
+
+UNDERSTAND
+    ->
+IMPLEMENT A SMALL EXAMPLE
+    ->
+UNDERSTAND WHEN/WHY TO USE IT
+    ->
+CONNECT IT TO DP-800 EXAM SCENARIOS
+
+
+================================================================================
+15. AREA 2 — SECURITY
+================================================================================
+
+Target:
+35–40% of DP-800 exam skill weighting.
+
+Learn:
+
+- Authentication
+- Authorization
+- Windows authentication
+- SQL authentication
+- Passwordless concepts
+- Logins
+- Users
+- Roles
+- Permissions
+- GRANT
+- DENY
+- REVOKE
+
+
+--------------------------------------------------------------------------------
+15.1 DATABASE SECURITY MODEL
+--------------------------------------------------------------------------------
+
+Concept:
+
+Login
+   |
+   v
+User
+   |
+   v
+Role
+   |
+   v
+Permissions
+
+
+--------------------------------------------------------------------------------
+15.2 DATA PROTECTION
+--------------------------------------------------------------------------------
+
+Learn:
+
+- Dynamic Data Masking
+- Encryption
+- Always Encrypted concepts
+- Column-level encryption concepts
+- Auditing
+- Row-Level Security
+
+
+================================================================================
+16. TRANSACTIONS AND CONCURRENCY
+================================================================================
+
+Learn:
+
+- ACID
+- Transactions
+- BEGIN TRANSACTION
+- COMMIT
+- ROLLBACK
+- Isolation levels
+- Locking
+- Blocking
+- Deadlocks
+- Concurrency control
+
+
+Example:
+
+BEGIN TRANSACTION
+
+    UPDATE inventory
+    SET quantity = quantity - 1
+    WHERE product_id = 10;
+
+COMMIT;
+
+
+The goal is to understand what happens when multiple users access and modify
+the same database simultaneously.
+
+
+================================================================================
+17. PERFORMANCE OPTIMIZATION
+================================================================================
+
+Learn:
+
+- Execution plans
+- Query Store
+- Dynamic Management Views (DMVs)
+- Statistics
+- Indexes
+- Query optimization
+- Blocking analysis
+- Deadlock analysis
+- Slow-query troubleshooting
+
+
+Main question we want to answer:
+
+"Why is this query slow?"
+
+Instead of randomly changing SQL, we learn to diagnose the actual cause.
+
+
+================================================================================
+18. SQL DATABASE PROJECTS
+================================================================================
+
+The project will eventually move from:
+
+SSMS
+    |
+    v
+Database exists only locally
+
+to:
+
+VS Code
+    |
+    v
+SQL Database Project
+    |
+    v
+Git
+    |
+    v
+GitHub
+    |
+    v
+Build / Validate
+    |
+    v
+Deploy
+    |
+    v
+SQL Server
+
+
+This introduces:
+
+- Database as code
+- Schema source control
+- Build validation
+- Deployment
+- Versioning
+- Collaboration
+
+
+================================================================================
+19. GIT AND GITHUB
+================================================================================
+
+Learn:
+
+- Git
+- GitHub
+- Repository
+- Commit
+- Branch
+- Merge
+- Pull request
+- Merge conflicts
+- Source control
+- Database schema versioning
+- CI/CD concepts
+- Secrets management
+
+
+Expected development model:
+
+Local development
+       |
+       v
+Git commit
+       |
+       v
+GitHub
+       |
+       v
+Branch
+       |
+       v
+Pull Request
+       |
+       v
+Validation
+       |
+       v
+Deployment
+
+
+================================================================================
+20. API LAYER
+================================================================================
+
+We will introduce Data API Builder (DAB).
+
+Architecture:
+
+Frontend / Application
+        |
+        | REST / GraphQL
+        v
+Data API Builder
+        |
+        v
+SQL Server
+        |
+        v
+Database
+
+
+Learn:
+
+- REST APIs
+- GraphQL
+- Entities
+- Pagination
+- Filtering
+- Searching
+- Caching
+- Stored-procedure exposure
+- API security
+
+
+================================================================================
+21. AZURE CONCEPTS
+================================================================================
+
+Relevant Azure concepts will be introduced when required.
+
+Potential concepts:
+
+- Azure SQL
+- Azure Monitor
+- Application Insights
+- Log Analytics
+- Azure Functions
+- Logic Apps
+- Managed Identity
+- Change tracking
+- Change Data Capture (CDC)
+
+We will not create unnecessary cloud infrastructure merely for the sake of
+having Azure resources.
+
+
+================================================================================
+22. AREA 3 — AI CAPABILITIES
+================================================================================
+
+Target:
+25–30% of DP-800 exam skill weighting.
+
+This is the major difference between this project and a normal SQL database.
+
+
+================================================================================
+23. AI MODELS
+================================================================================
+
+Learn:
+
+- AI models
+- LLMs
+- Embedding models
+- Multimodal models
+- Model selection
+- Model capabilities
+- Model limitations
+
+
+================================================================================
+24. EMBEDDINGS
+================================================================================
+
+Suppose a customer searches:
+
+"Lightweight laptop with excellent battery life for programming."
+
+The text can be converted into a numerical vector.
+
+Example concept:
+
+Text
+  |
+  v
+Embedding Model
+  |
+  v
+[0.124, -0.382, 0.721, ...]
+
+
+Learn:
+
+- What embeddings are
+- Why embeddings ar
